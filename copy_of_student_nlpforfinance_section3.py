@@ -280,11 +280,13 @@ model = BertForSequenceClassification.from_pretrained(
 # Given that this a huge neural network, we need to explicity specify 
 # in pytorch to run this model on the GPU.
 print(f'TORCH AVAULABE {torch.cuda.is_available()}')
-model.cuda();
+
+# model.cuda();
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-n_gpu = torch.cuda.device_count()
-torch.cuda.get_device_name(0)
+
+# n_gpu = torch.cuda.device_count()
+# torch.cuda.get_device_name(0)
 
 """
 **Initialize hyperparameters**
